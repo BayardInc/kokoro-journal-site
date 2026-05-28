@@ -93,7 +93,22 @@ body:not(.lp) .nav a{margin-right:14px}
 .device{background:linear-gradient(160deg,#2e2823,#403830);padding:10px;border-radius:46px;
   box-shadow:0 30px 60px -18px rgba(59,51,44,.5),0 8px 20px rgba(59,51,44,.18),inset 0 0 0 1.5px rgba(255,255,255,.06);
   width:280px}
-.device img{display:block;width:100%;height:auto;border-radius:37px}
+.device img{display:block;width:100%;height:auto;border-radius:37px;cursor:zoom-in}
+
+/* ---- lightbox (tap to enlarge screenshots) ---- */
+.lightbox{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;
+  background:rgba(40,34,28,.86);-webkit-backdrop-filter:blur(7px);backdrop-filter:blur(7px);padding:28px;opacity:0;transition:opacity .3s ease}
+.lightbox.open{display:flex;opacity:1}
+.lb-frame{background:linear-gradient(160deg,#2e2823,#403830);padding:9px;border-radius:42px;
+  box-shadow:0 40px 90px rgba(0,0,0,.5),inset 0 0 0 1.5px rgba(255,255,255,.07);transform:scale(.94);transition:transform .32s cubic-bezier(.19,.78,.2,1)}
+.lightbox.open .lb-frame{transform:scale(1)}
+.lb-frame img{display:block;width:auto;height:auto;max-width:min(86vw,360px);max-height:84vh;border-radius:34px}
+.lightbox-close{position:absolute;top:18px;right:20px;width:46px;height:46px;border-radius:999px;
+  background:rgba(251,245,233,.14);color:#FBF5E9;border:0;font-size:22px;line-height:1;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;transition:background .2s}
+.lightbox-close:hover{background:rgba(251,245,233,.26)}
+.lightbox-hint{position:absolute;bottom:26px;left:0;right:0;text-align:center;color:rgba(251,245,233,.62);font-size:12px;letter-spacing:.14em}
+@media (prefers-reduced-motion:reduce){.lightbox,.lb-frame{transition:none}}
 .device-hero{width:286px;transform:rotate(-1.5deg)}
 .tilt-l{transform:rotate(-3deg)}
 .tilt-r{transform:rotate(3deg)}
