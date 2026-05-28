@@ -4,240 +4,274 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>こころの日記 — 紙に書いて、AIにそっとひとこと</title>
-<meta name="description" content="1日のどこかで、すこしだけ立ちどまる。紙に書く時間を支える iOS アプリ。日記はあなたの端末で暗号化、運営も中身は読めません。月星座やハウスを踏まえたメッセージも、必要な人だけに。">
+<meta name="description" content="1日のどこかで、すこしだけ立ちどまる。手書きの日記を残し、AIがそっとひとことを添える iOS アプリ。日記はあなたの端末で暗号化、運営も中身は読めません。月星座やハウスを踏まえたことばも、必要な人だけに。">
 <meta property="og:title" content="こころの日記">
 <meta property="og:description" content="紙に書いて、AIにそっとひとこと。日記はあなたの端末で暗号化。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://kokorojournal.app/">
 <meta property="og:image" content="https://kokorojournal.app/assets/icon.png">
-<meta name="theme-color" content="#F1E7D7">
+<meta name="theme-color" content="#F4ECDD">
 <link rel="icon" href="assets/icon.png">
 <link rel="apple-touch-icon" href="assets/icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Noto+Serif+JP:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body class="lp">
+<div class="grain" aria-hidden="true"></div>
 
-<header class="hero">
-  <div class="hero-bg" aria-hidden="true"></div>
-  <div class="lp-wrap">
-    <div class="hero-inner">
-      <div class="hero-text reveal">
-        <p class="eyebrow">KOKORO  ・  こころの日記</p>
-        <h1 class="hero-title">紙に書いて、<br>AIにそっと、<br>ひとこと。</h1>
-        <p class="hero-sub">日記はあなたの端末で暗号化。<br>運営も、中身は読めません。</p>
-        <a class="cta" href="https://apps.apple.com/jp/app/id6767930351" rel="noopener">App Storeで入手</a>
-        <p class="hero-meta">iPhone ・ 無料ではじめる ・ 7日間 Premium 体験つき</p>
-      </div>
-      <div class="hero-art reveal">
-        <div class="hero-icon-wrap">
-          <img src="assets/icon.png" alt="" class="hero-icon">
-          <svg class="hero-spark spark-a" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 l1.6 5.4 l5.4 1.6 l-5.4 1.6 l-1.6 5.4 l-1.6 -5.4 l-5.4 -1.6 l5.4 -1.6 Z" fill="#DA8682"/></svg>
-          <svg class="hero-spark spark-b" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4 l1 4 l4 1 l-4 1 l-1 4 l-1 -4 l-4 -1 l4 -1 Z" fill="#E2B65C"/></svg>
-        </div>
+<!-- ░░ NAV ░░ -->
+<nav class="nav-bar">
+  <a class="nav-brand" href="#top"><img src="assets/icon.png" alt=""><span>こころの日記</span></a>
+  <a class="nav-cta" href="https://apps.apple.com/jp/app/id6767930351" rel="noopener">App Store</a>
+</nav>
+
+<!-- ░░ HERO ░░ -->
+<header class="hero" id="top">
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="kicker reveal">KOKORO&nbsp;JOURNAL</p>
+      <h1 class="hero-h reveal d1">紙に書いて、<br>AIに、そっと<br><span class="ink-accent">ひとこと。</span></h1>
+      <p class="latin-lead reveal d2"><em>quiet pages, kept by hand.</em></p>
+      <p class="hero-lead reveal d3">1日のどこかで、すこしだけ立ちどまる。<br>日記はあなたの端末で暗号化。<br>運営も、中身は読めません。</p>
+      <div class="hero-actions reveal d4">
+        <a class="btn-primary" href="https://apps.apple.com/jp/app/id6767930351" rel="noopener">App&nbsp;Storeで入手</a>
+        <span class="hero-note">iPhone ・ 無料ではじめる<br>7日間 Premium 体験つき</span>
       </div>
     </div>
+    <div class="hero-stage reveal d2">
+      <div class="float">
+        <div class="device device-hero">
+          <img src="assets/shots/screen-today.png" alt="こころの日記の「きょう」画面。手書きの記録を撮影し、気分を選ぶ。" width="294" height="654" loading="eager">
+        </div>
+      </div>
+      <svg class="spark s-a" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l1.7 5.6L19.4 9l-5.7 1.4L12 16l-1.7-5.6L4.6 9l5.7-1.4z"/></svg>
+      <svg class="spark s-b" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l1.1 4 4 1.1-4 1.1L12 14l-1.1-3.8-4-1.1 4-1.1z"/></svg>
+      <svg class="spark s-c" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/></svg>
+    </div>
   </div>
+  <div class="scroll-hint reveal d4" aria-hidden="true"><span></span></div>
 </header>
 
-<section class="section section-concept">
-  <div class="lp-wrap narrow reveal">
-    <p class="eyebrow">CONCEPT</p>
-    <h2 class="serif large">立ち止まる時間に、<br>そっと寄り添う。</h2>
-    <p class="lead-p">1日のどこかで、すこしだけ立ちどまる。<br>書いて残すのは、自分の声を聞きとるため。<br>続けるほど、自分のリズムが見えてきます。</p>
+<!-- ░░ MANIFESTO ░░ -->
+<section class="section manifesto">
+  <div class="wrap manifesto-grid">
+    <p class="vtext serif reveal" aria-hidden="true">立ちどまる時間に、そっと。</p>
+    <div class="manifesto-body reveal d1">
+      <p class="eyebrow">CONCEPT</p>
+      <h2 class="serif balance">書いて残すのは、<br>自分の声を、<br>聞きとるため。</h2>
+      <p class="lead">うまく書こうとしなくていい。きょう感じたことを、ひとことでも。続けるほどに、自分のリズムが、静かに見えてきます。</p>
+    </div>
   </div>
 </section>
 
-<section class="section section-features">
-  <div class="lp-wrap">
-    <p class="eyebrow center">FEATURES</p>
-    <h2 class="serif center">3つの、しるべ。</h2>
-
-    <article class="feature reveal">
-      <div class="feature-art">
-        <svg viewBox="0 0 132 132" class="illo" aria-hidden="true">
-          <circle cx="66" cy="66" r="62" fill="#FBF6EC"/>
-          <rect x="40" y="36" width="52" height="64" rx="8" fill="none" stroke="#DA8682" stroke-width="3.5"/>
-          <line x1="51" y1="56" x2="81" y2="56" stroke="#DA8682" stroke-width="3" stroke-linecap="round"/>
-          <line x1="51" y1="68" x2="81" y2="68" stroke="#DA8682" stroke-width="3" stroke-linecap="round"/>
-          <line x1="51" y1="80" x2="69" y2="80" stroke="#DA8682" stroke-width="3" stroke-linecap="round"/>
-          <path d="M84 96 L98 82 L104 88 L90 102 Z" fill="#E2B65C"/>
-        </svg>
+<!-- ░░ FEATURE 01 — 手書き ░░ -->
+<section class="section feature">
+  <div class="wrap feat-grid">
+    <div class="feat-stage reveal">
+      <div class="device tilt-l">
+        <img src="assets/shots/screen-detail.png" alt="手書きの日記を撮影し、文字起こしとタグ、おだやかな一日というまとめが付いた詳細画面。" width="294" height="654" loading="lazy">
       </div>
-      <div class="feature-text">
-        <p class="num">01</p>
-        <h3 class="serif">手書きで、残す。</h3>
-        <p>紙に書いて、撮って残す。短いひとことでもいい。文字が苦手なら、手書きの写真のままで。あなたの言葉のまま、あとから読み返せます。</p>
-      </div>
-    </article>
-
-    <article class="feature reverse reveal">
-      <div class="feature-art">
-        <svg viewBox="0 0 132 132" class="illo" aria-hidden="true">
-          <circle cx="66" cy="66" r="62" fill="#FBF6EC"/>
-          <circle cx="60" cy="68" r="25" fill="#E2B65C"/>
-          <circle cx="72" cy="61" r="22" fill="#FBF6EC"/>
-          <path d="M92 46 l3 8 l8 3 l-8 3 l-3 8 l-3 -8 l-8 -3 l8 -3 Z" fill="#DA8682"/>
-          <circle cx="86" cy="88" r="3.2" fill="#DA8682"/>
-        </svg>
-      </div>
-      <div class="feature-text">
-        <p class="num">02</p>
-        <h3 class="serif">星のリズムを、織りこむ。</h3>
-        <p>月星座やハウスを踏まえた、その日のあなたへのひとこと。占星術が苦手な方は、設定でOFFにもできます。星を使わない時は、目の前のことばに寄り添う落ちついたメッセージに。</p>
-      </div>
-    </article>
-
-    <article class="feature reveal">
-      <div class="feature-art">
-        <svg viewBox="0 0 132 132" class="illo" aria-hidden="true">
-          <circle cx="66" cy="66" r="62" fill="#FBF6EC"/>
-          <path d="M50 62 v-9 a16 16 0 0 1 32 0 v9" fill="none" stroke="#DA8682" stroke-width="3.5" stroke-linecap="round"/>
-          <rect x="42" y="62" width="48" height="40" rx="10" fill="#DA8682"/>
-          <circle cx="66" cy="78" r="5" fill="#FBF6EC"/>
-          <rect x="64" y="80" width="4" height="11" rx="2" fill="#FBF6EC"/>
-        </svg>
-      </div>
-      <div class="feature-text">
-        <p class="num">03</p>
-        <h3 class="serif">鍵は、あなたの中に。</h3>
-        <p>日記はあなたの端末で暗号化されてからサーバに送られます。鍵はあなたの端末の中、運営も中身を読めません。あいことばを忘れた時のために、復旧コードもあります。</p>
-      </div>
-    </article>
+      <span class="tape" aria-hidden="true"></span>
+    </div>
+    <div class="feat-text reveal d1">
+      <p class="num"><span>01</span>／てしごと</p>
+      <h3 class="serif">手書きのまま、<br>残しておける。</h3>
+      <p>紙に書いて、撮って残す。短いひとことでもいい。文字を打つのが気分でない日は、手書きの写真のまま。あなたの筆跡ごと、あとから読み返せます。AIが書き起こしも添えるので、検索や振り返りもなめらかに。</p>
+      <ul class="ticks">
+        <li>手書き写真 ＋ 自動の書き起こし</li>
+        <li>10色のきもちタグで、その日を色に</li>
+        <li>あとから「うごき」で時系列に俯瞰</li>
+      </ul>
+    </div>
   </div>
 </section>
 
-<section class="section section-tint section-flow">
-  <div class="lp-wrap reveal">
-    <p class="eyebrow center">FLOW</p>
-    <h2 class="serif center">1日の、ながれ。</h2>
+<!-- ░░ FEATURE 02 — AIのひとこと ░░ -->
+<section class="section feature tint">
+  <div class="wrap feat-grid reverse">
+    <div class="feat-stage reveal">
+      <div class="msg-card">
+        <p class="msg-eyebrow">きょうの ひとこと</p>
+        <p class="msg-body serif">川沿いの風に、立ちどまれた朝。<br>急がなくていい日だってある。<br>あなたのペースで、ひと呼吸。</p>
+        <p class="msg-sign">— かに座の月のあなたへ</p>
+      </div>
+      <svg class="spark s-d" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l1.7 5.6L19.4 9l-5.7 1.4L12 16l-1.7-5.6L4.6 9l5.7-1.4z"/></svg>
+    </div>
+    <div class="feat-text reveal d1">
+      <p class="num"><span>02</span>／よりそう</p>
+      <h3 class="serif">AIが、その日の<br>あなたへ、ひとこと。</h3>
+      <p>書き終えると、AIがそっとことばを添えます。励ましすぎず、決めつけず。語り口は「です・ます」と、やわらかな話しことばから選べます。気が向いた日は、返信のように対話することも。</p>
+      <ul class="ticks">
+        <li>その日の気分と文章を受けとめて</li>
+        <li>口調はあなた好みに切り替え可能</li>
+        <li>占星術はオフにもできる（後述）</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ FEATURE 03 — 星のリズム ░░ -->
+<section class="section feature">
+  <div class="wrap feat-grid">
+    <div class="feat-stage reveal">
+      <div class="device tilt-r">
+        <img src="assets/shots/screen-mind.png" alt="こころのうごき画面。30日のきもちの散布図と、感情のバランス、よく書いたことば。" width="294" height="654" loading="lazy">
+      </div>
+    </div>
+    <div class="feat-text reveal d1">
+      <p class="num"><span>03</span>／めぐり</p>
+      <h3 class="serif">星のリズムを、<br>内面の鏡に。</h3>
+      <p>月星座やハウスを踏まえた、その日のあなたへのことば。生年月日を登録すると、ホロスコープが静かに織りこまれます。星が気にならない方は、設定でオフに——そのときは、目の前のことばに寄り添う落ちついたメッセージに変わります。</p>
+      <ul class="ticks">
+        <li>月・太陽・土星から、個人天体・ハウスまで</li>
+        <li>30日のきもちの揺れを、やさしく可視化</li>
+        <li>月初には「月のふりかえり」を自動で一枚に</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ PRIVACY ░░ -->
+<section class="section privacy">
+  <div class="privacy-glow" aria-hidden="true"></div>
+  <div class="wrap narrow center">
+    <p class="eyebrow reveal">PRIVACY</p>
+    <svg class="lock-mark reveal d1" viewBox="0 0 64 64" aria-hidden="true">
+      <path d="M20 30v-8a12 12 0 0 1 24 0v8" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"/>
+      <rect x="14" y="30" width="36" height="28" rx="9" fill="currentColor"/>
+      <circle cx="32" cy="42" r="3.6" fill="var(--paper)"/>
+      <rect x="30.2" y="44" width="3.6" height="9" rx="1.8" fill="var(--paper)"/>
+    </svg>
+    <p class="pull serif reveal d1">あなたの日記は、<br>あなただけのもの。</p>
+    <p class="pull-sub reveal d2">運営も、中身を読めません。</p>
+    <p class="privacy-body reveal d2">本文と写真は、端末で暗号化（エンドツーエンド暗号化）されてからサーバに届きます。AIにことばを頼むときだけ、その一回分が生成のために使われ、応答後は残しません。あいことばと、その予備としての<b>復旧コード</b>——どちらの鍵も、あなたの手元にだけあります。</p>
+    <div class="priv-cards reveal d3">
+      <div class="priv-card"><span class="pc-i">✦</span><b>端末で暗号化</b><p>本文・写真はあなたの端末で鍵をかけてから保存。</p></div>
+      <div class="priv-card"><span class="pc-i">✦</span><b>見えないサーバ</b><p>運営は暗号文しか持たず、中身を読めません。</p></div>
+      <div class="priv-card"><span class="pc-i">✦</span><b>鍵はあなたに</b><p>あいことば＋復旧コードで、あなただけが開けます。</p></div>
+    </div>
+    <p class="muted reveal d3"><a href="privacy.html">プライバシーポリシーを読む →</a></p>
+  </div>
+</section>
+
+<!-- ░░ FLOW ░░ -->
+<section class="section flow tint">
+  <div class="wrap">
+    <p class="eyebrow center reveal">FLOW</p>
+    <h2 class="serif center reveal d1">1日の、ながれ。</h2>
     <ol class="steps">
-      <li>
-        <span class="step-n serif">壱</span>
-        <div>
-          <h4 class="serif">気分を選ぶ</h4>
-          <p>うれしい、しずか、つかれた——感じたままに。10色から複数選べます。</p>
-        </div>
-      </li>
-      <li>
-        <span class="step-n serif">弐</span>
-        <div>
-          <h4 class="serif">ことばを残す</h4>
-          <p>短い文でも、紙の写真でも。続けるほど、自分のリズムが見えてきます。</p>
-        </div>
-      </li>
-      <li>
-        <span class="step-n serif">参</span>
-        <div>
-          <h4 class="serif">AIのひとこと</h4>
-          <p>その日のあなたに、そっと届きます。気が向いた時は、返信のように会話することも。</p>
-        </div>
-      </li>
+      <li class="reveal"><span class="step-n serif">壱</span><div><h4 class="serif">気分を選ぶ</h4><p>うれしい、おだやか、つかれた——10色から、感じたままに。</p></div></li>
+      <li class="reveal d1"><span class="step-n serif">弐</span><div><h4 class="serif">ことばを残す</h4><p>短い文でも、紙の写真でも。続けるほど、リズムが見えてくる。</p></div></li>
+      <li class="reveal d2"><span class="step-n serif">参</span><div><h4 class="serif">ひとことが届く</h4><p>その日のあなたに、AIがそっと。返信のように話すこともできます。</p></div></li>
     </ol>
   </div>
 </section>
 
-<section class="section section-quote">
-  <div class="lp-wrap narrow center reveal">
-    <p class="eyebrow">PRIVACY</p>
-    <p class="quote serif">あなたの日記は、<br>あなたのもの。</p>
-    <p class="quote-sub">運営も、中身を読めません。</p>
-    <p class="body">本文と写真は端末で暗号化（E2EE）されてからサーバに送られます。AIに依頼するときだけ、その1回分が一時的に生成のため使われ、応答後は残しません。あいことばと、その予備としての復旧コード——どちらの鍵も、あなたの手元にだけあります。</p>
-    <p class="muted"><a href="privacy.html">プライバシーポリシーを読む</a></p>
+<!-- ░░ GALLERY ░░ -->
+<section class="section gallery">
+  <div class="wrap">
+    <p class="eyebrow center reveal">SCREENS</p>
+    <h2 class="serif center reveal d1">手のなかの、しずかな場所。</h2>
+    <div class="gal-row reveal d1">
+      <figure class="gal-item"><div class="device sm"><img src="assets/shots/screen-today.png" alt="きょう画面" width="294" height="654" loading="lazy"></div><figcaption>きょう ・ 残す</figcaption></figure>
+      <figure class="gal-item up"><div class="device sm"><img src="assets/shots/screen-calendar.png" alt="こよみ画面" width="294" height="654" loading="lazy"></div><figcaption>こよみ ・ 月を見渡す</figcaption></figure>
+      <figure class="gal-item"><div class="device sm"><img src="assets/shots/screen-detail.png" alt="詳細画面" width="294" height="654" loading="lazy"></div><figcaption>記録 ・ 読み返す</figcaption></figure>
+      <figure class="gal-item up"><div class="device sm"><img src="assets/shots/screen-mind.png" alt="うごき画面" width="294" height="654" loading="lazy"></div><figcaption>うごき ・ リズムを知る</figcaption></figure>
+    </div>
   </div>
 </section>
 
-<section class="section section-tint section-plans">
-  <div class="lp-wrap reveal">
-    <p class="eyebrow center">PLAN</p>
-    <h2 class="serif center">あなたに合った、頻度で。</h2>
-    <div class="plans">
-      <div class="plan">
+<!-- ░░ PLANS ░░ -->
+<section class="section plans tint">
+  <div class="wrap">
+    <p class="eyebrow center reveal">PLAN</p>
+    <h2 class="serif center reveal d1">あなたに合った、頻度で。</h2>
+    <div class="plan-grid">
+      <div class="plan reveal">
         <h4 class="serif">free</h4>
-        <p class="plan-tag">1日1回 ・ 広告あり</p>
-        <p class="plan-d">基本のホロスコープ<br>（月・太陽・土星）</p>
+        <p class="p-tag">1日1回 ・ 広告あり</p>
+        <p class="p-d">基本のホロスコープ<br><span class="dim">月・太陽・土星</span></p>
       </div>
-      <div class="plan">
+      <div class="plan reveal d1">
         <h4 class="serif">light</h4>
-        <p class="plan-tag">1日3回 ・ 広告なし</p>
-        <p class="plan-d">基本のホロスコープ<br>（月・太陽・土星）</p>
+        <p class="p-tag">1日3回 ・ 広告なし</p>
+        <p class="p-d">基本のホロスコープ<br><span class="dim">月・太陽・土星</span></p>
       </div>
-      <div class="plan plan-hi">
-        <h4 class="serif">standard <span class="badge">おすすめ</span></h4>
-        <p class="plan-tag">1日5回 ・ 広告なし</p>
-        <p class="plan-d">+ 個人天体（水・金・火）<br>+ 月のふりかえり</p>
+      <div class="plan featured reveal d1">
+        <span class="ribbon">おすすめ</span>
+        <h4 class="serif">standard</h4>
+        <p class="p-tag">1日5回 ・ 広告なし</p>
+        <p class="p-d">個人天体まで読む占い<br><span class="dim">＋ 月のふりかえり</span></p>
       </div>
-      <div class="plan">
+      <div class="plan reveal d2">
         <h4 class="serif">premium</h4>
-        <p class="plan-tag">1日10回 ・ 広告なし</p>
-        <p class="plan-d">+ 全天体・ハウス・ASC/MC<br>+ 月のふりかえり</p>
+        <p class="p-tag">1日10回 ・ 広告なし</p>
+        <p class="p-d">全天体・ハウス・ASC/MC<br><span class="dim">＋ 月のふりかえり</span></p>
       </div>
     </div>
-    <p class="note center">新規登録から7日間は Premium 体験。料金・解約は App Store から、いつでも管理できます。</p>
+    <p class="note center reveal d2">新規登録から7日間は Premium 体験。料金・解約は App Store から、いつでも管理できます。</p>
   </div>
 </section>
 
-<section class="section section-faq">
-  <div class="lp-wrap narrow reveal">
-    <p class="eyebrow">FAQ</p>
-    <h2 class="serif">よくある、問い。</h2>
-    <details>
-      <summary>あいことばを忘れたら？</summary>
-      <p>設定時に表示される <b>復旧コード</b> を保管しておけば、ロック画面の「あいことばを忘れた→復旧コードで開く」から日記を取り戻せます。両方を失うと、E2EE の性質上、運営でも復元できません。</p>
-    </details>
-    <details>
-      <summary>機種変更したら日記は引き継げる？</summary>
-      <p>同じ Apple ID でサインインすれば、サーバから日記が戻ります。あいことばを入力すると暗号鍵が復元され、いつも通り使えます。</p>
-    </details>
-    <details>
-      <summary>占星術が苦手でも使える？</summary>
-      <p>はい。設定で「占星術を使う」を OFF にすると、星に触れない落ち着いたメッセージになります。後からいつでも切替できます。</p>
-    </details>
-    <details>
-      <summary>サブスクは解約できる？</summary>
-      <p>いつでも解約できます。お使いの Apple ID の「サブスクリプション」設定から手続きください。</p>
-    </details>
-    <details>
-      <summary>対応端末は？</summary>
-      <p>現在は iPhone（iOS）のみ対応です。</p>
-    </details>
+<!-- ░░ FAQ ░░ -->
+<section class="section faq">
+  <div class="wrap narrow">
+    <p class="eyebrow reveal">FAQ</p>
+    <h2 class="serif reveal d1">よくある、問い。</h2>
+    <div class="reveal d1">
+    <details><summary>あいことばを忘れたら？</summary><p>設定時に表示される <b>復旧コード</b> を保管しておけば、ロック画面の「あいことばを忘れた→復旧コードで開く」から日記を取り戻せます。両方を失うと、E2EE の性質上、運営でも復元できません。</p></details>
+    <details><summary>機種変更したら日記は引き継げる？</summary><p>同じ Apple ID でサインインすれば、サーバから日記が戻ります。あいことばを入力すると暗号鍵が復元され、いつも通り使えます。</p></details>
+    <details><summary>占星術が苦手でも使える？</summary><p>はい。設定で「占星術を使う」を OFF にすると、星に触れない落ち着いたメッセージになります。後からいつでも切り替えられます。</p></details>
+    <details><summary>サブスクは解約できる？</summary><p>いつでも解約できます。お使いの Apple ID の「サブスクリプション」設定から手続きください。</p></details>
+    <details><summary>対応端末は？</summary><p>現在は iPhone（iOS）のみ対応です。</p></details>
+    </div>
   </div>
 </section>
 
-<section class="section section-cta">
-  <div class="lp-wrap center reveal">
+<!-- ░░ FINAL CTA ░░ -->
+<section class="section final">
+  <div class="final-glow" aria-hidden="true"></div>
+  <div class="wrap center reveal">
+    <img src="assets/icon.png" alt="" class="final-icon">
     <h2 class="serif">今日から、はじめる。</h2>
-    <a class="cta cta-big" href="https://apps.apple.com/jp/app/id6767930351" rel="noopener">App Storeで入手</a>
+    <p class="final-sub latin"><em>a quiet place to keep today.</em></p>
+    <a class="btn-primary big" href="https://apps.apple.com/jp/app/id6767930351" rel="noopener">App&nbsp;Storeで入手</a>
   </div>
 </section>
 
 <footer class="footer">
-  <div class="lp-wrap">
-    <div class="nav">
+  <div class="wrap foot-grid">
+    <div class="foot-brand"><img src="assets/icon.png" alt=""><span class="serif">こころの日記</span></div>
+    <nav class="foot-nav">
       <a href="privacy.html">プライバシーポリシー</a>
       <a href="support.html">サポート</a>
       <a href="mailto:sabe@bayard.co.jp">お問い合わせ</a>
-    </div>
-    <small>© Bayard Co., Ltd. ・ 東京</small>
+    </nav>
   </div>
+  <p class="foot-copy">© Bayard Co., Ltd. ・ 東京</p>
 </footer>
 
 <script>
   (function(){
-    if (!("IntersectionObserver" in window)) {
-      document.querySelectorAll(".reveal").forEach(el => el.classList.add("in"));
-      return;
-    }
+    var els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) { els.forEach(function(e){e.classList.add('in');}); return; }
     var io = new IntersectionObserver(function(es){
-      es.forEach(function(e){
-        if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
-      });
-    }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
-    document.querySelectorAll(".reveal").forEach(function(el){ io.observe(el); });
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -7% 0px' });
+    els.forEach(function(e){ io.observe(e); });
+
+    // gentle parallax on hero device
+    var stage = document.querySelector('.hero-stage .float');
+    if (stage && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      window.addEventListener('scroll', function(){
+        var y = window.scrollY;
+        if (y < 800) stage.style.transform = 'translateY(' + (y * 0.06) + 'px)';
+      }, { passive: true });
+    }
   })();
 </script>
-
 </body>
 </html>
