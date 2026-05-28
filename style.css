@@ -93,7 +93,7 @@ body:not(.lp) .nav a{margin-right:14px}
 .device{background:linear-gradient(160deg,#2e2823,#403830);padding:10px;border-radius:46px;
   box-shadow:0 30px 60px -18px rgba(59,51,44,.5),0 8px 20px rgba(59,51,44,.18),inset 0 0 0 1.5px rgba(255,255,255,.06);
   width:280px}
-.device img{display:block;width:100%;border-radius:37px}
+.device img{display:block;width:100%;height:auto;border-radius:37px}
 .device-hero{width:286px;transform:rotate(-1.5deg)}
 .tilt-l{transform:rotate(-3deg)}
 .tilt-r{transform:rotate(3deg)}
